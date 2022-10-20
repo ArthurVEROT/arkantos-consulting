@@ -1,0 +1,259 @@
+$font1: "Montserrat", sans-serif;
+$darkGrey: #444444;
+$ocre: #cb9558;
+$lightGrey: #f7f7f7;
+$lightBlack: #222;
+$transition-speed: 0.3s;
+
+@mixin flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@import "components/bloc-title";
+@import "components/button";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font1;
+  color: $darkGrey;
+}
+
+section,
+footer {
+  position: relative;
+  padding: 100px 10vw 100px 10vw;
+}
+
+p {
+  line-height: 1.75;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+//
+/* Header */
+//
+header {
+  box-shadow: 0 0 4px #404040;
+  background-color: $lightGrey;
+  z-index: 1;
+  position: relative;
+
+  .navbar {
+    @include flex-centered;
+    ul {
+      @include flex-centered;
+      width: 90vw;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    li {
+      text-decoration: none;
+      text-transform: uppercase;
+      list-style: none;
+      padding: 40px 0;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    li:hover {
+      color: $ocre;
+    }
+
+    .devis-link {
+      border: 1px solid $ocre;
+      padding: 10px;
+      color: $ocre;
+      transition: $transition-speed;
+    }
+    .devis-link:hover {
+      color: black;
+      border: 1px solid black;
+    }
+  }
+}
+
+//
+/* Section 1 */
+//
+.section1 {
+  background-color: $lightGrey;
+
+  .intro {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 70px;
+    h1 {
+      color: black;
+      font-size: 4rem;
+      width: 70vw;
+      padding: 0 10px;
+    }
+  }
+  .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .wave svg {
+    position: relative;
+    display: block;
+    width: calc(137% + 1.3px);
+    height: 206px;
+  }
+
+  .wave .shape-fill {
+    fill: #ffffff;
+  }
+}
+
+//
+/* Section 2 */
+//
+
+.section2 {
+  .presentation {
+    display: flex;
+    flex-direction: column;
+
+    .content {
+      @include flex-centered;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    .text-container {
+      width: 70vw;
+      padding-right: 40px;
+    }
+
+    .img-container {
+      @include flex-centered;
+      padding: 0 100px;
+    }
+
+    img {
+      border-radius: 50%;
+      width: 225px;
+    }
+  }
+}
+
+.section3 {
+  background-color: $lightGrey;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .references {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2 {
+    color: black;
+    line-height: 30px;
+    padding-right: 80px;
+  }
+
+  .companies-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+// Section4
+.section4 {
+}
+
+// Footer
+footer {
+  background-color: $lightGrey;
+  overflow: hidden;
+
+  .curve {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .curve svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 285px;
+  }
+
+  .curve .shape-fill {
+    fill: #ffffff;
+  }
+
+  .container {
+    display: flex;
+    padding-top: 100px;
+
+    div {
+      padding: 0 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .text {
+      flex: 1 1 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .info {
+      flex: 1 1 0px;
+
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: baseline;
+      align-items: center;
+      gap: 1rem;
+
+      li {
+        text-decoration: none;
+        list-style: none;
+        line-height: 1.75;
+        font-weight: 500;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      .fa-linkedin {
+        color: $ocre;
+        font-size: 30px;
+      }
+    }
+
+    .call-to-action {
+      @extend .button-div;
+      flex: 1 1 0px;
+      flex-direction: column;
+
+      h3 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

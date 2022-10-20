@@ -1,0 +1,19 @@
+.bloc-title {
+  @include flex-centered;
+  flex-direction: column;
+  padding: 20px 0;
+  margin: 10px 0;
+  margin-bottom: 20px;
+  .barre {
+    width: 11rem;
+    height: 5px;
+    border-radius: 5px;
+    background-color: $ocre;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    margin: 20px 0;
+  }
+}
+.bloc-title:hover .barre {
+  width: 20rem;
+}
