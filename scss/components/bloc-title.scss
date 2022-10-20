@@ -1,3 +1,16 @@
+$font1: "Montserrat", sans-serif;
+$darkGrey: #444444;
+$ocre: #cb9558;
+$lightGrey: #f7f7f7;
+$lightBlack: #222;
+$transition-speed: 0.3s;
+
+@mixin flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .bloc-title {
   @include flex-centered;
   flex-direction: column;

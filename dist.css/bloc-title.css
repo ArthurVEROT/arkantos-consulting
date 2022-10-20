@@ -1,0 +1,22 @@
+.bloc-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0;
+  margin: 10px 0;
+  margin-bottom: 20px;
+}
+.bloc-title .barre {
+  width: 11rem;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #cb9558;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  margin: 20px 0;
+}
+
+.bloc-title:hover .barre {
+  width: 20rem;
+}/*# sourceMappingURL=bloc-title.css.map */
