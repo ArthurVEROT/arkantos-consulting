@@ -71,7 +71,7 @@ a {
   text-decoration: none;
 }
 
-/* Header */
+/* Navbar */
 .navbar-scroll {
   box-shadow: 0 0 4px #404040;
   background-color: white;
@@ -96,6 +96,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 64px;
 }
 .navbar ul {
   display: flex;

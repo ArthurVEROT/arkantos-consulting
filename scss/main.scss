@@ -15,6 +15,7 @@
   box-sizing: border-box;
   font-family: $font1;
   color: $darkGrey;
+  // border: 1px solid black;
 }
 
 section,
@@ -34,7 +35,7 @@ a {
 }
 
 //
-/* Header */
+/* Navbar */
 //
 .navbar-scroll {
   box-shadow: 0 0 4px #404040;
@@ -58,6 +59,7 @@ a {
 
 .navbar {
   @include flex-centered;
+  height: 64px;
   ul {
     @include flex-centered;
     width: 90vw;
