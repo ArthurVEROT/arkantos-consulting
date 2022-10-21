@@ -72,18 +72,32 @@ a {
 }
 
 /* Header */
-header {
+.navbar-scroll {
   box-shadow: 0 0 4px #404040;
-  background-color: #f7f7f7;
-  z-index: 1;
-  position: relative;
+  background-color: white;
+  z-index: 2;
+  position: fixed;
+  overflow: hidden;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  transition: 0.3s;
 }
-header .navbar {
+
+.navbar-unscroll {
+  background-color: #f7f7f7;
+  z-index: 2;
+  position: fixed;
+  overflow: hidden;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+.navbar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header .navbar ul {
+.navbar ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,7 +105,7 @@ header .navbar ul {
   gap: 3rem;
   flex-wrap: wrap;
 }
-header .navbar li {
+.navbar li {
   text-decoration: none;
   text-transform: uppercase;
   list-style: none;
@@ -100,19 +114,19 @@ header .navbar li {
   font-weight: 600;
   cursor: pointer;
 }
-header .navbar a {
+.navbar a {
   text-decoration: none;
 }
-header .navbar a:hover {
+.navbar a:hover {
   color: #cb9558;
 }
-header .navbar .devis-link {
+.navbar .devis-link {
   border: 1px solid #cb9558;
   padding: 10px;
   color: #cb9558;
   transition: 0.3s;
 }
-header .navbar .devis-link:hover {
+.navbar .devis-link:hover {
   color: black;
   border: 1px solid black;
 }
@@ -120,6 +134,7 @@ header .navbar .devis-link:hover {
 /* Section 1 */
 .section1 {
   background-color: #f7f7f7;
+  padding-top: 150px;
 }
 .section1 .intro {
   display: flex;

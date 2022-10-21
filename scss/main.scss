@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-} 
+}
 
 @import "components/bloc-title.scss";
 @import "components/button.scss";
@@ -36,48 +36,61 @@ a {
 //
 /* Header */
 //
-header {
+.navbar-scroll {
   box-shadow: 0 0 4px #404040;
+  background-color: white;
+  z-index: 2;
+  position: fixed;
+  overflow: hidden;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  transition: $transition-speed;
+}
+
+.navbar-unscroll {
   background-color: $lightGrey;
-  z-index: 1;
-  position: relative;
+  z-index: 2;
+  position: fixed;
+  overflow: hidden;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
 
-  .navbar {
+.navbar {
+  @include flex-centered;
+  ul {
     @include flex-centered;
-    ul {
-      @include flex-centered;
-      width: 90vw;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
+    width: 90vw;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
 
-    li {
-      text-decoration: none;
-      text-transform: uppercase;
-      list-style: none;
-      padding: 40px 0;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    a {
-      text-decoration: none;
-    }
+  li {
+    text-decoration: none;
+    text-transform: uppercase;
+    list-style: none;
+    padding: 40px 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+  }
 
-    a:hover {
-      color: $ocre;
-    }
+  a:hover {
+    color: $ocre;
+  }
 
-    .devis-link {
-      border: 1px solid $ocre;
-      padding: 10px;
-      color: $ocre;
-      transition: $transition-speed;
-    }
-    .devis-link:hover {
-      color: black;
-      border: 1px solid black;
-    }
+  .devis-link {
+    border: 1px solid $ocre;
+    padding: 10px;
+    color: $ocre;
+    transition: $transition-speed;
+  }
+  .devis-link:hover {
+    color: black;
+    border: 1px solid black;
   }
 }
 
@@ -86,6 +99,7 @@ header {
 //
 .section1 {
   background-color: $lightGrey;
+  padding-top: 150px;
 
   .intro {
     display: flex;
