@@ -1,18 +1,13 @@
-$font1: "Montserrat", sans-serif;
-$darkGrey: #444444;
-$ocre: #cb9558;
-$lightGrey: #f7f7f7;
-$lightBlack: #222;
-$transition-speed: 0.3s;
+@import "utilities/variables.scss";
 
 @mixin flex-centered {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} 
 
-@import "components/bloc-title";
-@import "components/button";
+@import "components/bloc-title.scss";
+@import "components/button.scss";
 
 * {
   margin: 0;
@@ -32,6 +27,10 @@ p {
   line-height: 1.75;
   font-weight: 500;
   font-size: 1.25rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 //
@@ -61,7 +60,11 @@ header {
       font-weight: 600;
       cursor: pointer;
     }
-    li:hover {
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
       color: $ocre;
     }
 
@@ -232,6 +235,10 @@ footer {
       align-items: center;
       gap: 1rem;
 
+      .nameEmail {
+        padding-bottom: 20px;
+      }
+
       li {
         text-decoration: none;
         list-style: none;
@@ -241,9 +248,21 @@ footer {
         font-weight: 400;
       }
 
+      .linkedin-container {
+        position: relative;
+      }
+
       .fa-linkedin {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         color: $ocre;
         font-size: 30px;
+        transition: $transition-speed;
+      }
+      .fa-linkedin:hover {
+        font-size: 36px;
       }
     }
 

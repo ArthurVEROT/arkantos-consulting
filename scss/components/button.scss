@@ -1,3 +1,5 @@
+@import "../utilities/variables.scss";
+
 @mixin flex-centered {
   display: flex;
   justify-content: center;
@@ -9,9 +11,9 @@
   width: 30vw;
   padding: 20px;
 }
-button {
-  padding: 20px;
+.button-contact {
   color: white;
+  padding: 20px;
   font-size: 1.1rem;
   font-weight: 500;
   background-color: $ocre;
@@ -23,6 +25,6 @@ button {
   z-index: 1;
 }
 
-button:hover {
+.button-contact:hover {
   background-color: black;
 }

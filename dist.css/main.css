@@ -29,9 +29,9 @@
   padding: 20px;
 }
 
-button {
-  padding: 20px;
+.button-contact {
   color: white;
+  padding: 20px;
   font-size: 1.1rem;
   font-weight: 500;
   background-color: #cb9558;
@@ -43,7 +43,7 @@ button {
   z-index: 1;
 }
 
-button:hover {
+.button-contact:hover {
   background-color: black;
 }
 
@@ -65,6 +65,10 @@ p {
   line-height: 1.75;
   font-weight: 500;
   font-size: 1.25rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Header */
@@ -96,7 +100,10 @@ header .navbar li {
   font-weight: 600;
   cursor: pointer;
 }
-header .navbar li:hover {
+header .navbar a {
+  text-decoration: none;
+}
+header .navbar a:hover {
   color: #cb9558;
 }
 header .navbar .devis-link {
@@ -239,6 +246,9 @@ footer .container .info {
   align-items: center;
   gap: 1rem;
 }
+footer .container .info .nameEmail {
+  padding-bottom: 20px;
+}
 footer .container .info li {
   text-decoration: none;
   list-style: none;
@@ -247,9 +257,20 @@ footer .container .info li {
   font-size: 1rem;
   font-weight: 400;
 }
+footer .container .info .linkedin-container {
+  position: relative;
+}
 footer .container .info .fa-linkedin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #cb9558;
   font-size: 30px;
+  transition: 0.3s;
+}
+footer .container .info .fa-linkedin:hover {
+  font-size: 36px;
 }
 footer .container .call-to-action {
   flex: 1 1 0px;
