@@ -1,0 +1,23 @@
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px 0;
+  margin: 10px 0;
+  margin-bottom: 20px;
+}
+.titleContainer .divider {
+  width: 11rem;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #cb9558;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  margin: 20px 0;
+}
+
+.titleContainer:hover .divider {
+  width: 20rem;
+}/*# sourceMappingURL=sectionTitle.css.map */

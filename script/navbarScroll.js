@@ -1,16 +1,13 @@
 // Navbar scroll
-const navbar = document.querySelector("#navbar-container");
-console.log("navbar", navbar);
+const navbar = document.querySelector("#navbar");
 let lastKnownScrollPosition = 0;
 
 function addScrollClass() {
-  navbar.classList.remove("navbar-unscroll");
-  navbar.classList.add("navbar-scroll");
+  navbar.classList.add("scrolled");
 }
 
 function addUnscrollClass() {
-  navbar.classList.remove("navbar-scroll");
-  navbar.classList.add("navbar-unscroll");
+  navbar.classList.remove("scrolled");
 }
 
 document.addEventListener("scroll", (e) => {
@@ -21,8 +18,7 @@ document.addEventListener("scroll", (e) => {
     window.requestAnimationFrame(() => {
       addScrollClass();
     });
-  }
-  else {
+  } else {
     window.requestAnimationFrame(() => {
       addUnscrollClass();
     });

@@ -1,13 +1,14 @@
-.bloc-title {
+.titleContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   flex-direction: column;
   padding: 20px 0;
   margin: 10px 0;
   margin-bottom: 20px;
 }
-.bloc-title .barre {
+.titleContainer .divider {
   width: 11rem;
   height: 5px;
   border-radius: 5px;
@@ -17,33 +18,30 @@
   margin: 20px 0;
 }
 
-.bloc-title:hover .barre {
+.titleContainer:hover .divider {
   width: 20rem;
 }
 
-.button-div, footer .container .call-to-action {
+.buttonContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30vw;
-  padding: 20px;
 }
 
-.button-contact {
-  color: white;
-  padding: 20px;
-  font-size: 1.1rem;
-  font-weight: 500;
+.contactButton {
   background-color: #cb9558;
+  color: white;
+  padding: 1rem;
+  font-weight: 500;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
+  transition: 0.4s;
   z-index: 1;
 }
 
-.button-contact:hover {
+.contactButton:hover {
   background-color: black;
 }
 
@@ -55,32 +53,15 @@
   color: #444444;
 }
 
-section,
-footer {
-  position: relative;
-  padding: 100px 10vw 100px 10vw;
-}
-
-p {
-  line-height: 1.75;
-  font-weight: 500;
-  font-size: 1.25rem;
-}
-
 a {
   text-decoration: none;
 }
 
-/* Navbar */
-.navbar-scroll {
-  box-shadow: 0 0 4px #404040;
-  background-color: white;
-  z-index: 2;
-  position: fixed;
-  overflow: hidden;
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
-  transition: 0.3s;
+/* Mobile */
+section,
+footer {
+  position: relative;
+  padding: 50px 10vw 50px 10vw;
 }
 
 .navbar-unscroll {
@@ -90,135 +71,168 @@ a {
   overflow: hidden;
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
+  transition: 0.4s;
 }
 
-.navbar {
+.scrolled {
+  box-shadow: 0 0 4px #404040;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.navbarSection {
+  padding: 0;
+}
+.navbarSection .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 30px;
   height: 64px;
 }
-.navbar ul {
+.navbarSection .header .menu {
+  cursor: pointer;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.navbarSection .header .menu-global {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  left: 0;
+  border-top: 4.2px solid #222;
+  width: 100%;
+  transition: 0.55s;
+}
+.navbarSection .header .menu-top {
+  top: 0;
+}
+.navbarSection .header .menu-middle {
+  top: 10.8px;
+}
+.navbarSection .header .menu-bottom {
+  top: 21.6px;
+}
+.navbarSection .header .menu-top-click {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  top: 9px;
+  transform: rotate(50deg);
+  transition: 0.55s 0.5s;
+}
+.navbarSection .header .menu-middle-click {
+  opacity: 0;
+}
+.navbarSection .header .menu-bottom-click {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  top: 9px;
+  transform: rotate(-410deg);
+  transition: 0.55s 0.5s;
+}
+.navbarSection .desktopNavbar {
+  display: none;
+}
+.navbarSection .mobileNavbar {
+  display: flex;
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  overflow-y: hidden;
+  transition: height 0.6s ease-in-out;
+}
+.navbarSection .mobileNavbar li {
+  text-align: center;
+  text-transform: capitalize;
+  padding: 5px 0;
+  list-style: none;
+  line-height: 1.75;
+}
+.navbarSection .mobileNavbar li a:hover {
+  color: #cb9558;
+}
+.navbarSection .unvisible {
+  height: 0px;
+  padding: 0;
+}
+
+.introSection {
+  background-color: #f7f7f7;
+  padding: 150px 10vw 100px 10vw;
+}
+.introSection .content {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90vw;
-  gap: 5rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 32px;
 }
-.navbar li {
-  text-decoration: none;
-  text-transform: uppercase;
-  list-style: none;
-  padding: 40px 0;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
+.introSection .content h1 {
+  font-size: 2rem;
 }
-.navbar a {
-  text-decoration: none;
+.introSection .waveDesktop {
+  display: none;
 }
-.navbar a:hover {
-  color: #cb9558;
-}
-.navbar .devis-link {
-  border: 1px solid #cb9558;
-  padding: 10px;
-  color: #cb9558;
-  transition: 0.3s;
-}
-.navbar .devis-link:hover {
-  color: black;
-  border: 1px solid black;
-}
-
-/* Section 1 */
-.section1 {
-  background-color: #f7f7f7;
-  padding-top: 150px;
-}
-.section1 .intro {
-  display: flex;
-  padding-top: 40px;
-  padding-bottom: 70px;
-}
-.section1 .intro h1 {
-  color: black;
-  font-size: 4rem;
-  width: 70vw;
-  padding: 0 10px;
-}
-.section1 .wave {
+.introSection .waveMobile {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  transform: rotate(180deg);
 }
-.section1 .wave svg {
+.introSection .waveMobile svg {
   position: relative;
   display: block;
-  width: calc(137% + 1.3px);
-  height: 206px;
+  width: calc(100% + 1.3px);
+  height: 79px;
 }
-.section1 .wave .shape-fill {
+.introSection .waveMobile .shape-fill {
   fill: #ffffff;
 }
 
-/* Section 2 */
-.section2 .presentation {
+.presentationSection .presentation h2 {
+  padding: 10px 0;
+}
+.presentationSection .presentation .content {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
-.section2 .presentation .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.presentationSection .presentation .content p {
+  line-height: 1.75;
+  font-weight: 500;
 }
-.section2 .presentation h2 {
-  margin: 10px 0;
-  color: #222;
-}
-.section2 .presentation .text-container {
-  width: 70vw;
-  padding-right: 40px;
-}
-.section2 .presentation .img-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 100px;
-}
-.section2 .presentation img {
+.presentationSection .presentation .content img {
   border-radius: 50%;
-  width: 225px;
+  max-width: 225px;
 }
 
-.section3 {
+.referenceSection {
   background-color: #f7f7f7;
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
-.section3 .references {
+.referenceSection .references {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 32px;
 }
-.section3 h2 {
-  color: #222;
-  line-height: 30px;
-  padding-right: 80px;
-}
-.section3 .companies-container {
+.referenceSection .companiesContainer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.referenceSection .companiesContainer img {
+  max-width: 100%;
 }
 
 footer {
   background-color: #f7f7f7;
-  overflow: hidden;
 }
 footer .curve {
   position: absolute;
@@ -232,48 +246,45 @@ footer .curve {
 footer .curve svg {
   position: relative;
   display: block;
-  width: calc(132% + 1.3px);
-  height: 285px;
+  width: calc(100% + 1.3px);
+  height: 104px;
 }
 footer .curve .shape-fill {
   fill: #ffffff;
 }
 footer .container {
   display: flex;
-  padding-top: 100px;
-}
-footer .container div {
-  padding: 0 20px;
-  display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 52px;
+  padding: 30px 0;
 }
 footer .container .text {
-  flex: 1 1 0px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+footer .container .text p {
+  text-align: center;
+  line-height: 1.75;
+  font-weight: 500;
 }
 footer .container .info {
-  flex: 1 1 0px;
-  text-align: center;
   display: flex;
-  flex-direction: column;
-  justify-content: baseline;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
-}
-footer .container .info .nameEmail {
+  flex-direction: column;
+  gap: 22px;
   padding-bottom: 20px;
 }
 footer .container .info li {
-  text-decoration: none;
+  text-align: center;
   list-style: none;
   line-height: 1.75;
-  font-weight: 500;
-  font-size: 1rem;
-  font-weight: 400;
 }
-footer .container .info .linkedin-container {
+footer .container .info .linkedinContainer {
   position: relative;
 }
 footer .container .info .fa-linkedin {
@@ -283,15 +294,112 @@ footer .container .info .fa-linkedin {
   transform: translate(-50%, -50%);
   color: #cb9558;
   font-size: 30px;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 footer .container .info .fa-linkedin:hover {
   font-size: 36px;
 }
-footer .container .call-to-action {
-  flex: 1 1 0px;
+footer .container .callToAction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  gap: 16px;
 }
-footer .container .call-to-action h3 {
-  margin-bottom: 20px;
+
+@media (min-width: 900px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .menu {
+    display: none;
+  }
+  .header .desktopNavbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  .header .desktopNavbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+  }
+  .header .desktopNavbar ul li {
+    text-decoration: none;
+    text-transform: uppercase;
+    list-style: none;
+    padding: 40px 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .header .desktopNavbar ul li a {
+    text-decoration: none;
+  }
+  .header .desktopNavbar ul li a:hover {
+    color: #cb9558;
+  }
+  .introSection {
+    padding-bottom: 200px;
+  }
+  .introSection .content {
+    flex-direction: row;
+  }
+  .introSection .content h1 {
+    font-size: 4rem;
+    width: 70vw;
+    padding: 0 10px;
+  }
+  .introSection .content .buttonContainer {
+    width: 30vw;
+  }
+  .introSection .waveMobile {
+    display: none;
+  }
+  .introSection .waveDesktop {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+  .introSection .waveDesktop svg {
+    position: relative;
+    display: block;
+    width: calc(137% + 1.3px);
+    height: 206px;
+  }
+  .introSection .waveDesktop .shape-fill {
+    fill: #ffffff;
+  }
+  .presentationSection .presentation .content {
+    flex-direction: row;
+  }
+  .presentationSection .presentation p {
+    width: 70vw;
+    padding-right: 40px;
+  }
+  .presentationSection .presentation .img-container {
+    padding: 0 100px;
+  }
+  footer .container {
+    flex-direction: row;
+  }
+  footer .container .text {
+    flex: 1 1 0px;
+  }
+  footer .container .info {
+    flex: 1 1 0px;
+  }
+  footer .container .callToAction {
+    flex: 1 1 0px;
+  }
 }/*# sourceMappingURL=main.css.map */

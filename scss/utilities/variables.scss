@@ -1,9 +1,20 @@
+$font1: "Montserrat", sans-serif;
+$darkGrey: #444444;
+$ocre: #cb9558;
+$lightGrey: #f7f7f7;
+$lightBlack: #222;
+$transition-speed: 0.4s;
+$burgerSize: 0.6;
 
-  $font1: "Montserrat", sans-serif;
-  $darkGrey: #444444;
-  $ocre: #cb9558;
-  $lightGrey: #f7f7f7;
-  $lightBlack: #222;
-  $transition-speed: 0.3s;
+@mixin flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  
+@mixin flex-centered-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

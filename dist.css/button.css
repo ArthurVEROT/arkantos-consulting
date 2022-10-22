@@ -1,25 +1,22 @@
-.button-div {
+.buttonContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30vw;
-  padding: 20px;
 }
 
-.button-contact {
-  color: white;
-  padding: 20px;
-  font-size: 1.1rem;
-  font-weight: 500;
+.contactButton {
   background-color: #cb9558;
+  color: white;
+  padding: 1rem;
+  font-weight: 500;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
+  transition: 0.4s;
   z-index: 1;
 }
 
-.button-contact:hover {
+.contactButton:hover {
   background-color: black;
 }/*# sourceMappingURL=button.css.map */

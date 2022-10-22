@@ -14,8 +14,32 @@
     <title>Arkantos consulting</title>
   </head>
   <body>
-    <div class="navbar-unscroll" id="navbar-container">
-      <nav class="navbar">
+    <section class="navbarSection navbar-unscroll" id="navbar">
+      <div class="header">
+        <div>Logo</div>
+        <nav class="desktopNavbar">
+          <ul>
+            <li><a href="https://www.google.com/">À propos</a></li>
+            <li><a href="https://www.google.com/">Services</a></li>
+            <li><a href="https://www.google.com/">Témoignages</a></li>
+            <li><a href="https://www.google.com/">Ressources</a></li>
+            <div>
+              <li>
+                <a class="devis-link" href="https://www.google.com/"
+                  >Un projet ?</a
+                >
+              </li>
+            </div>
+          </ul>
+        </nav>
+        <div class="menu">
+          <span class="menu-global menu-top"></span>
+          <span class="menu-global menu-middle"></span>
+          <span class="menu-global menu-bottom"></span>
+        </div>
+      </div>
+
+      <nav class="mobileNavbar unvisible">
         <ul>
           <li><a href="https://www.google.com/">À propos</a></li>
           <li><a href="https://www.google.com/">Services</a></li>
@@ -30,18 +54,31 @@
           </div>
         </ul>
       </nav>
-    </div>
+    </section>
 
-    <section class="section1">
-      <div class="intro div-in-section">
+    <section class="introSection">
+      <div class="content">
         <h1>Faites passer votre entreprise au niveau supérieur</h1>
-        <div class="button-div">
-          <a class="button-contact" href="https://www.google.com/"
+        <div class="buttonContainer">
+          <a class="contactButton" href="https://www.google.com/"
             >Parlez-moi de votre projet</a
           >
         </div>
       </div>
-      <div class="wave">
+      <div class="waveMobile">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+      <div class="waveDesktop">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -56,26 +93,24 @@
       </div>
     </section>
 
-    <section class="section2">
-      <div class="div-in-section presentation">
-        <div class="bloc-title">
-          <h2>Pilippe Verot</h2>
+    <section class="presentationSection">
+      <div class="presentation">
+        <div class="titleContainer">
+          <h2>Philippe Verot</h2>
           <h3>Consultant en management des organisations</h3>
-          <div class="barre"></div>
+          <div class="divider"></div>
         </div>
 
         <div class="content">
-          <div class="text-container">
-            <p>
-              Bonjour et bienvenue sur mon site. Je suis consultant en
-              management des organisation, j’accompagne mes clients dans leur
-              stratégie commerciale, le choix de leur ERP, ainsi que la mise en
-              place de ces ERP et autres solutions logistique. Une expértise
-              externe qui soulagera vos équipes, qui aidera à tenir les
-              objectifs et les délais est le secret d’une bonne réussite de
-              votre projet informatique.
-            </p>
-          </div>
+          <p>
+            Bonjour et bienvenue sur mon site. Je suis consultant en management
+            des organisations, j’accompagne mes clients dans leur stratégie
+            commerciale, le choix de leur ERP, ainsi que la mise en place de ces
+            ERP et autres solutions logistique. Une expértise externe qui
+            soulagera vos équipes, qui aidera à tenir les objectifs et les
+            délais est le secret d’une bonne réussite de votre projet
+            informatique.
+          </p>
           <div class="img-container">
             <img src="./img/philippe-verot.jpeg" alt="philippe-verot" />
           </div>
@@ -83,12 +118,12 @@
       </div>
     </section>
 
-    <section class="section3">
+    <section class="referenceSection">
       <div class="references">
         <div>
           <h2>J'ai travaillé pour:</h2>
         </div>
-        <div class="companies-container">
+        <div class="companiesContainer">
           <img src="./img/figaro.png" alt="Figaro" />
           <img src="./img/forbes.png" alt="Forbes" />
           <img src="./img/jdn.png" alt="JDN" />
@@ -97,10 +132,10 @@
       </div>
     </section>
 
-    <section class="section4">
-      <div class="bloc-title">
+    <section class="expertiseSection">
+      <div class="titleContainer">
         <h2>Mes domaines d'expértise</h2>
-        <div class="barre"></div>
+        <div class="divider"></div>
       </div>
     </section>
 
@@ -129,24 +164,22 @@
         </div>
 
         <div class="info">
-          <div class="nameEmail">
-            <ul>
-              <li>Philippe Verot</li>
-              <li>philippe.verot@sfr.fr</li>
-            </ul>
-          </div>
+          <ul>
+            <li>Philippe Verot</li>
+            <li>philippe.verot@sfr.fr</li>
+          </ul>
           <a
-            class="linkedin-container"
+            class="linkedinContainer"
             href="https://www.linkedin.com/in/philippe-verot/"
             ><i class="fa fa-linkedin"></i
           ></a>
         </div>
 
-        <div class="call-to-action">
+        <div class="callToAction">
           <div>
             <h3>Vous avez un projet ?</h3>
           </div>
-          <a class="button-contact" href="https://www.google.com/"
+          <a class="contactButton" href="https://www.google.com/"
             >Contactez-moi</a
           >
         </div>
@@ -154,4 +187,5 @@
     </footer>
   </body>
   <script src="./script/navbarScroll.js"></script>
+  <script src="./script/mobileMenu.js"></script>
 </html>
