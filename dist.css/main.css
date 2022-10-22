@@ -344,6 +344,16 @@ footer .container .callToAction {
   .header .desktopNavbar ul li a:hover {
     color: #cb9558;
   }
+  .header .desktopNavbar ul li .unProjet {
+    border: 1px solid #cb9558;
+    padding: 10px;
+    color: #cb9558;
+    transition: 0.4s;
+  }
+  .header .desktopNavbar ul li .unProjet:hover {
+    color: black;
+    border: 1px solid black;
+  }
   .introSection {
     padding-bottom: 200px;
   }

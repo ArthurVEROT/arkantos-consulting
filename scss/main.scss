@@ -371,6 +371,17 @@ footer {
           a:hover {
             color: $ocre;
           }
+
+          .unProjet {
+            border: 1px solid $ocre;
+            padding: 10px;
+            color: $ocre;
+            transition: $transition-speed;
+          }
+          .unProjet:hover {
+            color: black;
+            border: 1px solid black;
+          }
         }
       }
     }
@@ -393,7 +404,6 @@ footer {
       .buttonContainer {
         width: 30vw;
       }
-
     }
 
     .waveMobile {
