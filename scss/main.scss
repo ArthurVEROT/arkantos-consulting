@@ -17,6 +17,11 @@ a {
   text-decoration: none;
 }
 
+@mixin paragraphe {
+  line-height: 1.75;
+  font-weight: 500;
+}
+
 ////////////////////////////////////////
 /* Mobile */
 ////////////////////////////////////////
@@ -35,7 +40,7 @@ footer {
 }
 
 ////////////////////////////////////////
-///////////// Navbar Section/////////////
+///////////// Navbar Section mobile/////////////
 ////////////////////////////////////////
 
 .navbar-unscroll {
@@ -135,7 +140,7 @@ footer {
 }
 
 //////////////////////////////////////
-/////////// Intro Section /////////////
+/////////// Intro Section mobile /////////////
 ////////////////////////////////////////
 .introSection {
   background-color: $lightGrey;
@@ -174,19 +179,29 @@ footer {
 }
 
 ////////////////////////////////////////
-////////Presentation Section ///////////
+////////Presentation Section mobile///////////
 ////////////////////////////////////////
 
 .presentationSection {
   .presentation {
+    div {
+      // border: 1px solid black;
+    }
     h2 {
       padding: 10px 0;
     }
     .content {
       @include flex-centered-mobile;
+
+      .presentationTextContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        margin-bottom: 30px;
+      }
+
       p {
-        line-height: 1.75;
-        font-weight: 500;
+        @include paragraphe;
       }
       img {
         border-radius: 50%;
@@ -197,7 +212,7 @@ footer {
 }
 
 ////////////////////////////////////////
-//////// Reference Section ///////////
+//////// Reference Section mobile///////////
 ////////////////////////////////////////
 
 .referenceSection {
@@ -219,13 +234,60 @@ footer {
 }
 
 ////////////////////////////////////////
-//////// Expertise Section ///////////
+//////// Expertise Section mobile ///////////
 ////////////////////////////////////////
 .expertiseSection {
+  div {
+    // border: 1px solid black;
+  }
+  .allExpertiseContainer {
+    @include flex-centered-mobile;
+
+    .oneExpertiseContainer {
+      padding-bottom: 80px;
+
+      .imageContainer {
+        @include flex-centered;
+      }
+
+      img {
+        max-width: 100px;
+        padding-bottom: 30px;
+      }
+
+      h3 {
+        padding-bottom: 10px;
+      }
+
+      p {
+        @include paragraphe;
+      }
+    }
+  }
 }
 
 ////////////////////////////////////////
-//////////// Footer ////////////////////
+//////////// Change ERP mobile////////////////////
+////////////////////////////////////////
+.changeERPSection {
+  @include flex-centered-mobile;
+  gap: 1.5rem;
+  background-color: $ocre;
+  margin-bottom: 100px;
+
+  h2 {
+    color: white;
+    text-align: center;
+  }
+
+  .contactButton {
+    background-color: white;
+    color: $lightBlack;
+  }
+}
+
+////////////////////////////////////////
+//////////// Footer mobile////////////////////
 ////////////////////////////////////////
 
 footer {
@@ -331,8 +393,13 @@ footer {
 /// ////////////////////////////////////////
 /// /* Desktop */
 @media (min-width: 900px) {
+  section,
+  footer {
+    position: relative;
+    padding: 100px 10vw 100px 10vw;
+  }
   ////////////////////////////////////////
-  ///////////// Navbar Section/////////////
+  ///////////// Navbar Section desktop /////////////
   ////////////////////////////////////////
 
   .header {
@@ -388,7 +455,7 @@ footer {
   }
 
   //////////////////////////////////////
-  /////////// Intro Section /////////////
+  /////////// Intro Section desktop/////////////
   ////////////////////////////////////////
 
   .introSection {
@@ -398,7 +465,7 @@ footer {
 
       h1 {
         font-size: 4rem;
-        width: 70vw;
+        width: 65vw;
         padding: 0 10px;
       }
       .buttonContainer {
@@ -433,37 +500,77 @@ footer {
   }
 
   ////////////////////////////////////////
-  ////////Presentation Section ///////////
+  ////////Presentation Section desktop///////////
   ////////////////////////////////////////
 
   .presentationSection {
     .presentation {
+      div {
+        // border: 1px solid black;
+      }
       .content {
         flex-direction: row;
-      }
-      p {
-        width: 70vw;
-        padding-right: 40px;
-      }
 
-      .img-container {
-        padding: 0 100px;
+        .presentationTextContainer {
+          padding-right: 30px;
+          margin: 0;
+        }
+        .img-container {
+          padding: 0 100px;
+        }
       }
     }
   }
 
   ////////////////////////////////////////
-  //////// Reference Section ///////////
+  //////// Reference Section desktop///////////
   ////////////////////////////////////////
 
   ////////////////////////////////////////
-  //////// Expertise Section ///////////
+  //////// Expertise Section desktop///////////
   ////////////////////////////////////////
   .expertiseSection {
+    // div { border: 1px solid black;}
+    .allExpertiseContainer {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: baseline;
+
+      .oneExpertiseContainer {
+        width: 30vw;
+        padding: 40px 30px;
+
+        img {
+          max-width: 150px;
+          padding-bottom: 30px;
+        }
+      }
+    }
   }
 
   ////////////////////////////////////////
-  //////////// Footer ////////////////////
+  //////////// Change ERP Desktop////////////////////
+  ////////////////////////////////////////
+  .changeERPSection {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 50px 10vw 50px 10vw;
+
+    h2 {
+      font-size: 2rem;
+    }
+    .contactButton {
+      background-color: white;
+      color: $lightBlack;
+    }
+    .contactButton:hover {
+      color: $ocre;
+    }
+  }
+
+  ////////////////////////////////////////
+  //////////// Footer desktop////////////////////
   ////////////////////////////////////////
 
   footer {

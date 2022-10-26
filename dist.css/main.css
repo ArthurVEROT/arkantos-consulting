@@ -202,6 +202,12 @@ footer {
   align-items: center;
   flex-direction: column;
 }
+.presentationSection .presentation .content .presentationTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 30px;
+}
 .presentationSection .presentation .content p {
   line-height: 1.75;
   font-weight: 500;
@@ -229,6 +235,50 @@ footer {
 }
 .referenceSection .companiesContainer img {
   max-width: 100%;
+}
+
+.expertiseSection .allExpertiseContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.expertiseSection .allExpertiseContainer .oneExpertiseContainer {
+  padding-bottom: 80px;
+}
+.expertiseSection .allExpertiseContainer .oneExpertiseContainer .imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.expertiseSection .allExpertiseContainer .oneExpertiseContainer img {
+  max-width: 100px;
+  padding-bottom: 30px;
+}
+.expertiseSection .allExpertiseContainer .oneExpertiseContainer h3 {
+  padding-bottom: 10px;
+}
+.expertiseSection .allExpertiseContainer .oneExpertiseContainer p {
+  line-height: 1.75;
+  font-weight: 500;
+}
+
+.changeERPSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: #cb9558;
+  margin-bottom: 100px;
+}
+.changeERPSection h2 {
+  color: white;
+  text-align: center;
+}
+.changeERPSection .contactButton {
+  background-color: white;
+  color: #222;
 }
 
 footer {
@@ -308,6 +358,11 @@ footer .container .callToAction {
 }
 
 @media (min-width: 900px) {
+  section,
+footer {
+    position: relative;
+    padding: 100px 10vw 100px 10vw;
+  }
   .header {
     display: flex;
     justify-content: center;
@@ -362,7 +417,7 @@ footer .container .callToAction {
   }
   .introSection .content h1 {
     font-size: 4rem;
-    width: 70vw;
+    width: 65vw;
     padding: 0 10px;
   }
   .introSection .content .buttonContainer {
@@ -393,12 +448,41 @@ footer .container .callToAction {
   .presentationSection .presentation .content {
     flex-direction: row;
   }
-  .presentationSection .presentation p {
-    width: 70vw;
-    padding-right: 40px;
+  .presentationSection .presentation .content .presentationTextContainer {
+    padding-right: 30px;
+    margin: 0;
   }
-  .presentationSection .presentation .img-container {
+  .presentationSection .presentation .content .img-container {
     padding: 0 100px;
+  }
+  .expertiseSection .allExpertiseContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+  .expertiseSection .allExpertiseContainer .oneExpertiseContainer {
+    width: 30vw;
+    padding: 40px 30px;
+  }
+  .expertiseSection .allExpertiseContainer .oneExpertiseContainer img {
+    max-width: 150px;
+    padding-bottom: 30px;
+  }
+  .changeERPSection {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 50px 10vw 50px 10vw;
+  }
+  .changeERPSection h2 {
+    font-size: 2rem;
+  }
+  .changeERPSection .contactButton {
+    background-color: white;
+    color: #222;
+  }
+  .changeERPSection .contactButton:hover {
+    color: #cb9558;
   }
   footer .container {
     flex-direction: row;

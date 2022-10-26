@@ -1,0 +1,44 @@
+@import "utilities/variables.scss";
+@import "components/sectionTitle.scss";
+@import "components/button.scss";
+
+// border: 1px solid black;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font1;
+  color: $darkGrey;
+  // border: 1px solid black;
+}
+
+.contactFormContainer {
+  border: 1px solid black;
+  padding-top: 100px;
+
+  .contactForm {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 1rem;
+
+    .inputContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3125rem;
+
+      input {
+        height: 30px;
+      }
+    }
+    input[type="submit"] {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 0;
+      background-color: black;
+      color: white;
+    }
+  }
+}

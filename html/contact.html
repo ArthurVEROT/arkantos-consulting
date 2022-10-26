@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../dist.css/main.css" />
+    <link rel="stylesheet" href="../dist.css/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Contact</title>
+  </head>
+  <body>
+    <section class="navbarSection navbar-unscroll" id="navbar">
+      <div class="header">
+        <div>Logo</div>
+        <nav class="desktopNavbar">
+          <ul>
+            <li><a href="https://www.google.com/">À propos</a></li>
+            <li><a href="https://www.google.com/">Services</a></li>
+            <li><a href="https://www.google.com/">Témoignages</a></li>
+            <li><a href="https://www.google.com/">Ressources</a></li>
+            <li>
+              <a class="unProjet" href="https://www.google.com/">Un projet ?</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu">
+          <span class="menu-global menu-top"></span>
+          <span class="menu-global menu-middle"></span>
+          <span class="menu-global menu-bottom"></span>
+        </div>
+      </div>
+
+      <nav class="mobileNavbar unvisible">
+        <ul>
+          <li><a href="https://www.google.com/">À propos</a></li>
+          <li><a href="https://www.google.com/">Services</a></li>
+          <li><a href="https://www.google.com/">Témoignages</a></li>
+          <li><a href="https://www.google.com/">Ressources</a></li>
+          <div>
+            <li>
+              <a class="devis-link" href="https://www.google.com/"
+                >Un projet ?</a
+              >
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="contactFormContainer">
+      <form action="" class="contactForm" id="contactForm">
+        <div class="inputContainer">
+          <label for="prenom">Votre prénom</label>
+          <input type="text" name="" id="prenom" />
+        </div>
+        <div class="inputContainer">
+          <label for="nom">Votre nom</label>
+          <input type="text" name="" id="nom" />
+        </div>
+        <div class="inputContainer">
+          <label for="email">Votre adresse e-mail</label>
+          <input type="text" name="" id="email" />
+        </div>
+        <div class="inputContainer">
+          <label for="tel">Votre numéro de téléphone</label>
+          <input type="text" name="" id="tel" />
+        </div>
+        <div class="inputContainer">
+          <label for="message">Votre message</label>
+          <textarea name="" id="message" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+          <input type="submit" value="Envoyer" name="" id="submitButton" />
+        </div>
+      </form>
+    </section>
+  </body>
+
+  <script src="../script/navbarScroll.js"></script>
+  <script src="../script/mobileMenu.js"></script>
+  <script type="module" src="../index.js"></script>
+</html>

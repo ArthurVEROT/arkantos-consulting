@@ -1,0 +1,81 @@
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px 0;
+  margin: 10px 0;
+  margin-bottom: 20px;
+}
+.titleContainer .divider {
+  width: 11rem;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #cb9558;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  margin: 20px 0;
+}
+
+.titleContainer:hover .divider {
+  width: 20rem;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactButton {
+  background-color: #cb9558;
+  color: white;
+  padding: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+  z-index: 1;
+}
+
+.contactButton:hover {
+  background-color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: #444444;
+}
+
+.contactFormContainer {
+  border: 1px solid black;
+  padding-top: 100px;
+}
+.contactFormContainer .contactForm {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  gap: 1rem;
+}
+.contactFormContainer .contactForm .inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+}
+.contactFormContainer .contactForm .inputContainer input {
+  height: 30px;
+}
+.contactFormContainer .contactForm input[type=submit] {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 0;
+  background-color: black;
+  color: white;
+}/*# sourceMappingURL=contact.css.map */
